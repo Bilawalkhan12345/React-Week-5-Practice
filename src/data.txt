@@ -1,0 +1,106 @@
+===== Installation and configuration of Tailwind css in react project ====
+1. Write this command in VS Code terminal "npm install tailwindcss @tailwindcss/vite"
+2. Now configurationin the project go to file "vite.config.js" and add
+
+import react from '@vitejs/plugin-react'
+import { defineConfig } from 'vite'
+import tailwindcss from '@tailwindcss/vite' === ADD THIS === 
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],  === ADD ", tailwindcss()"  HERE === 
+});
+
+
+3. Now import tailwindcss in the file you want  "@import "tailwindcss";"
+
+
+======  JSX Rules  ======
+
+WRONG 
+return(
+    <h1> Hello </h1>
+    <p> Welcome </p>
+)
+
+Correct 
+return(
+  <div>  
+    <h1> Hello </h1>
+    <p> Welcome </p>
+  </div>
+)
+
+Better way Instead of div react provides Fragment
+
+Correct 
+return(
+  <>  
+    <h1> Hello </h1>
+    <p> Welcome </p>
+  </>
+)
+
+
+======  JSX Rules 2 ======
+Close Every Tag
+<img /> , <br /> , <imput /> , <hr />
+
+
+
+======  JSX Rules 3 ======
+
+In Html = onclick, tabindex, readonly
+JSX : onClick , tabIndex, readOnly
+
+
+======  Javascript Expressions inside JSX ======
+
+const name = "Ali";
+<h1>Hello {name}</h1>
+
+====== How to Comment in JSX ======
+
+JSX: {/* HELLO */}
+
+
+
+
+import { useState } from 'react'
+import heroImg from './assets/hero.png'
+import reactLogo from './assets/react.svg'
+import viteLogo from './assets/vite.svg'
+import './App.css'
+import { flushSync } from 'react-dom'
+
+// function App(){
+//   return(
+//     <div className='min-h-screen flex items-center justify-center bg-gray-200'>
+//       <h1 className='text-5xl font-bold text-red-600'>Hello Tailwind</h1>
+//     </div>
+//   );
+// }
+
+
+
+function App() {
+  const name = "Ali";
+
+  return (
+    <div className="text-center mt-10">
+      <h1 className="text-3xl font-bold text-gray-600">
+        Hello {name}
+      </h1>
+
+      <p className="mt-3 text-gray-600">
+        Welcome to React
+      </p>
+
+      <button className="btn mt-5 bg-gray-400 text-white px-5 py-2 rounded hover:bg-gray-500">
+        Start Learning
+      </button>
+    </div>
+  );
+}
+
+export default App;
