@@ -1,4 +1,4 @@
 function Header(){
-    return <h2>Welcome</h2>
+    return <h2>Welcome to my Website</h2>
 }
 export default Header;
