@@ -6,17 +6,34 @@ import './App.css'
 import { flushSync } from 'react-dom'
 import Student from './Components/Students'
 import Card from './Components/Card'
+import Child from './Components/Child'
+import Parent from './Components/Parent'
+import GrandChild from './Components/GrandChild'
+
 
 
 function App(){
+  const studentName = "Ali";
+
   return(
-    <>
-       <Card>
-        <h2>Hello from main file</h2>
-       </Card>
-    </>
-  )
+    <div>
+      <h1 style={{textAlign: "center" , fontSize: "3rem" , fontWeight: "bold"}}>React prop drilling Example</h1>
+
+      <Parent studentName = {studentName}/>
+    </div>
+  );
 }
+
+
+// function App(){
+//   return(
+//     <>
+//        <Card>
+//         <h2>Hello from main file</h2>
+//        </Card>
+//     </>
+//   )
+// }
 
 
 
