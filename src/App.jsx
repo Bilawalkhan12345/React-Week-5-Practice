@@ -5,19 +5,33 @@ import viteLogo from './assets/vite.svg'
 import './App.css'
 import { flushSync } from 'react-dom'
 import Student from './Components/Students'
+import Card from './Components/Card'
+
 
 function App(){
-  const name = "Ali";
-
   return(
-  <div>
-    <Student age = {20} city = "Lahore"/>
-    <Student name = "Ahmed" age = {25} city = "Islamabad"/>
-    <Student name = "Farhan" age = {23} city = "Karachi"/>
-  </div>
-);
-
+    <>
+       <Card>
+        <h2>Hello from main file</h2>
+       </Card>
+    </>
+  )
 }
+
+
+
+// function App(){
+//   const name = "Ali";
+
+//   return(
+//   <div>
+//     <Student age = {20} city = "Lahore"/>
+//     <Student name = "Ahmed" age = {25} city = "Islamabad"/>
+//     <Student name = "Farhan" age = {23} city = "Karachi"/>
+//   </div>
+// );
+
+// }
 
 
 
